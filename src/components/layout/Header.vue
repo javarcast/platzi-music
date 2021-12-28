@@ -8,8 +8,10 @@
               <strong>📻 PLatzi Music</strong>
             </div>
             <div class="nav-right nav-menu">
-              <router-link class="nav-item" to="/">Search</router-link>
-              <router-link class="nav-item" to="about">About</router-link>
+              <a  class="nav-item" @click="selectLang('en')">Ingles</a>
+              <a  class="nav-item" @click="selectLang('es')">Español</a>
+              <router-link class="nav-item" to="/">{{ $t('search') }}</router-link>
+              <router-link class="nav-item" to="about">{{ $t('about') }}</router-link>
               <router-link class="nav-item" to="register">Sign Up</router-link>
           </div>
           </div>
@@ -31,6 +33,11 @@ import VPlayer from '../Player.vue'
 export default {
   components: {
     VPlayer
+  },
+  methods: {
+    selectLang (lang) {
+      this.$i18n.locale = lang
+    }
   }
 }
 </script>
