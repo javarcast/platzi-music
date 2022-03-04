@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from '@/App.vue'
-import EvenetBus from '@/plugins/event-bus'
+import eventBus from '@/plugins/event-bus'
 import msToMm from '@/filters/ms-to-mm'
 import routes from '@/routes'
 import blur from '@/directives/blur'
@@ -11,7 +11,7 @@ import i18n from '@/i18n'
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
-Vue.use(EvenetBus)
+Vue.use(eventBus)
 Vue.use(msToMm)
 Vue.use(blur)
 

@@ -35,8 +35,7 @@ export default {
   }
 }
 </script>
-
-<style scoped>
+<style scoped >
   .container{
     display: flex;
     justify-content: center;
